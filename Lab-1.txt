@@ -1,0 +1,155 @@
+PERFECT NUMBER:
+
+n = int(input("Enter any number: "))
+sum1 = 0
+for i in range(1, n):
+    if(n % i == 0):
+        sum1 = sum1 + i
+if (sum1 == n):
+    print("The number is a Perfect number!")
+else:
+    print("The number is not a Perfect number!")
+
+out put
+    Enter any number: 6
+    The number is a Perfect number!
+
+PERFORM ARTHIMETIC OPERATIONS:
+
+num1 = int(input('Enter First number: '))
+num2 = int(input('Enter Second number '))
+add = num1 + num2
+dif = num1 - num2
+mul = num1 * num2
+div = num1 / num2
+modulus = num1 % num2
+print('Sum of ',num1 ,'and' ,num2 ,'is :',add)
+print('Difference of ',num1 ,'and' ,num2 ,'is :',dif)
+print('Product of' ,num1 ,'and' ,num2 ,'is :',mul)
+print('Division of ',num1 ,'and' ,num2 ,'is :',div)
+print('Modulus of ',num1 ,'and' ,num2 ,'is :',modulus)
+
+OUTPUT
+Enter First number: 7
+Enter Second number 5
+Sum of  7 and 5 is : 12
+Difference of  7 and 5 is : 2
+Product of 7 and 5 is : 35
+Division of  7 and 5 is : 1.4
+Modulus of  7 and 5 is : 2
+
+
+PRIME NUMBERS UPTO CERTAIN RANGE:
+
+lower = int(input("Enter lower range: "))  
+upper = int(input("Enter upper range: "))  
+  
+for num in range(lower,upper + 1):  
+   if num > 1:  
+       for i in range(2,num):  
+           if (num % i) == 0:  
+               break  
+       else:  
+           print(num)
+           output
+           Enter lower range: 2
+Enter upper range: 50
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+
+SUM OF DIGITS IN AN NUMBER AND AMRSTRONG NUMBER:
+# compute sum of digits in  
+# number. 
+  
+# Function to get sum of digits  
+def getSum(n): 
+   
+    sum = 0
+    while (n != 0): 
+      
+        sum = sum + int(n % 10) 
+        n = int(n/10) 
+      
+    return sum
+  
+n = 57
+print(getSum(n)) 
+
+output
+12
+   
+   ARMSTRONG
+
+num = int(input("Enter a number: "))
+
+# initialize sum
+sum = 0
+
+temp = num
+while temp > 0:
+   digit = temp % 10
+   sum += digit ** 3
+   temp //= 10
+
+if num == sum:
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number")
+   
+   OUTPUT
+   Enter a number: 65
+65 is not an Armstrong number
+
+SWAPPING OF TWO NUMBERS:
+# Python program to swap two variables
+
+x = 5
+y = 7
+temp = x
+x = y
+y = temp
+
+print('The value of x after swapping: {}'.format(x))
+print('The value of y after swapping: {}'.format(y))
+out put
+The value of x after swapping: 7
+The value of y after swapping: 5
+
+TWIN PRIMES:
+
+def is_prime(n):
+   for i in range(2, n):
+      if n % i == 0:
+         return False
+   return True
+
+def generate_twins(start, end):
+   for i in range(start, end):
+      j = i + 2
+      if(is_prime(i) and is_prime(j)):
+         print("{:d} and {:d}".format(i, j))
+
+generate_twins(2, 100)
+
+output
+3 and 5
+5 and 7
+11 and 13
+17 and 19
+29 and 31
+41 and 43
+59 and 61
+71 and 73
